@@ -38,8 +38,8 @@ social:
   email: calvin@koca.io # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    #- https://twitter.com/username # change to your twitter homepage
     - https://github.com/calvinkatz # change to your github homepage
+    - https://twitter.com/calvin_katz # change to your twitter homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -96,7 +96,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: assets/avatar.jpg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
