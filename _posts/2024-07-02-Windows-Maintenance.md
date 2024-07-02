@@ -35,7 +35,7 @@ Ideally this will scan and find everything healthy. If Windows finds violations 
 If Windows finds violations and cannot repair, then repairing the system with DISM tool would be the next step:
 
 ```batch
-DISM.exe /Online /Cleanup-image /Restorehealth
+DISM /Online /Cleanup-image /Restorehealth
 ```
 
 If successful reboot and try SFC again. Otherwise a reinstall of Windows will probably be needed.
