@@ -26,7 +26,7 @@ If the update didn't require a reboot, do it anyways.
 
 After rebooting run the System File Checker tool and remediate as needed. From elevated prompt:
 
-```cmd
+```batch
 sfc /scannow
 ```
 
@@ -34,7 +34,7 @@ Ideally this will scan and find everything healthy. If Windows finds violations 
 
 If Windows finds violations and cannot repair, then repairing the system with DISM tool would be the next step:
 
-```cmd
+```batch
 DISM.exe /Online /Cleanup-image /Restorehealth
 ```
 
@@ -46,7 +46,7 @@ Windows keeps old update installers and other data that after the system is conf
 
 Set the Disk Cleanup Settings (only needed once, settings are saved). From elevated prompt:
 
-```cmd
+```batch
 cleanmgr /sageset:1
 ```
 
@@ -56,16 +56,16 @@ Check all the boxes and click OK.
 
 Then run Disk Cleanup using those settings. From elevated prompt:
 
-```cmd
+```batch
 cleanmgr /sagerun:1
 ```
 
-> Sometimes the progress for cleanmgr freezes. Move or hover over the windows to unfreeze.
+> Sometimes the progress for cleanmgr freezes. Hover over or move the cleanmgr window to unfreeze.
 {: .prompt-tip }
 
 ### Optional: Disk Optimization
 
-This part is really optional but I like to run a TRIM and slab consolidation. From elevated PowerShell:
+This part is optional but I like to run a TRIM and slab consolidation. From elevated PowerShell:
 
 ```powershell
 Get-Volume | `
